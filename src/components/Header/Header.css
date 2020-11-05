@@ -1,0 +1,30 @@
+.header{
+    text-align: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.header-bg h1{
+    padding-top: 130px;
+}
+input{
+    height: 30px;
+    border-radius: 10px;
+}
+.search-button{
+    padding: 1px 20px;
+    background-color: firebrick;
+    color: white;
+    border-radius: 20px;
+}
+.gap{
+    margin-right: 20px;
+    color: black;
+}
+.logoImg{
+    height: 50px;
+}
+.search-part{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+

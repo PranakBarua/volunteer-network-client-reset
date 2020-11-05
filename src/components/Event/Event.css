@@ -1,0 +1,14 @@
+.all-event{
+    overflow-y: hidden;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.title-body{
+    background-color: lightgreen;
+}
+.img{
+    height: 300px;
+}
+.title-color{
+    color: saddlebrown;
+}

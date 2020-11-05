@@ -1,0 +1,27 @@
+.event{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: flex;
+    box-shadow: 10px 10px 40px gray;
+    margin: 50px;
+    height: 300px;
+    border-radius: 20px;
+}
+.img-part{
+    width: 40%;
+    text-align: center;
+    margin-top: 30px;
+
+}
+.img-part img{
+    height: 200px;
+    width: 200px;
+}
+.description-part{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+.delete-button{
+    padding-bottom: 40px;
+}
