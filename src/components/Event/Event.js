@@ -10,7 +10,7 @@ const Event = (props) => {
     // const newUser={...loggedInUser,image:img}
     // setLoggedInUser(newUser)
     return (
-        <div className="all-event col-md-3">
+        <div className="all-event col-md-3 col-sm-6">
             <Link to={`/register/${name}`}>
                 <Card style={{ width: '18rem' }}>
                 <Card.Img  className="img" variant="top" src={img} />

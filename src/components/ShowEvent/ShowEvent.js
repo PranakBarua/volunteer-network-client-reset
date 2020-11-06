@@ -19,7 +19,7 @@ const ShowEvent = (props) => {
     }
     return (
         
-            <div className="col-md-5 event">
+            <div className="col-md-5 col-sm-6 event">
                <div className='img-part'>
                    <img src={img} alt=""/>
                </div>

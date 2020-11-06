@@ -5,6 +5,7 @@ import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router-dom';
 import firebaseConfig from './firebase.config';
 import './Login.css'
+import HeaderTop from '../Header/HeaderTop';
 if(firebase.apps.length===0){
     firebase.initializeApp(firebaseConfig)
 }
@@ -33,17 +34,32 @@ const Login = () => {
             setUser(newUser)
             setLoggedInUser(newUser)
             console.log(newUser)
-            history.replace(from);
+            storeAuthToken();
           })
           .catch(function(error) {
             
           });
     }
+    const storeAuthToken=()=>{
+       
+        firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
+        .then(function(idToken) {
+            sessionStorage.setItem('token',idToken)
+            history.replace(from);
+          }).catch(function(error) {
+            // Handle error
+          });
+    }
     return (
-        <div className="d-flex justify-content-center align-items-center">
-            <div className="login-area ">
-                <button className="loginButton search-button" onClick={handleGoogleSignIn}>Google Sign In</button>
-            </div> 
+        <div>
+            <div>
+                <HeaderTop></HeaderTop>
+            </div>
+            <div className="d-flex justify-content-center align-items-center">
+                <div className="login-area ">
+                    <button className="loginButton search-button" onClick={handleGoogleSignIn}>Google Sign In</button>
+                </div> 
+            </div>
         </div>
     );
 };

@@ -15,10 +15,10 @@ const HeaderTop = () => {
                         <Link className="gap" to="/home">Home</Link>
                         <Link className="gap" to="/donation">Donation</Link>
                         <Link className="gap" to="/events">Events</Link>
-                        <Link className="gap" to="/blog">Blog</Link>
-                        <Link className="gap"><button className="btn btn-primary">Register</button></Link>
+                        <Link className="gap" to="/dashboard">Dashboard</Link>
+                        <Link className="gap" ><button className="btn btn-primary">Register</button></Link>
                         {loggedInUser.name?<h5>{loggedInUser.name}</h5>:
-                        <Link className="gap"><button className="btn btn-secondary">Admin</button></Link>}
+                        <Link className="gap" to="/dashboard"><button className="btn btn-secondary">Admin</button></Link>}
                     </div>
                 </nav>
         </div>

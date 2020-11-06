@@ -12,6 +12,8 @@ import Login from './components/Login/Login';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import HeaderTop from './components/Header/HeaderTop';
 import PersonalEvents from './components/PersonalEvents/PersonalEvents';
+import AddAdmin from './components/AddAdmin/AddAdmin';
+import Dashboard from './components/Dashboard/Dashboard';
 export const UserContext=createContext();
 function App() {
   const [loggedInUser,setLoggedInUser]=useState({
@@ -20,7 +22,6 @@ function App() {
   return (
     <UserContext.Provider value={[loggedInUser,setLoggedInUser]}>
      <Router>    
-        <HeaderTop></HeaderTop>
        <Switch>
          <Route path="/header">
            <Header></Header>
@@ -30,6 +31,12 @@ function App() {
          </PrivateRoute>
          <Route path="/login">
            <Login></Login>
+         </Route>
+         <Route path="/addAdmin">
+           <AddAdmin></AddAdmin>
+         </Route>
+         <Route path="/dashboard">
+           <Dashboard></Dashboard>
          </Route>
          <PrivateRoute path="/events">
            <PersonalEvents></PersonalEvents>

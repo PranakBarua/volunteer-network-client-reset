@@ -11,6 +11,7 @@ import {
   KeyboardTimePicker,
   KeyboardDatePicker,
 } from '@material-ui/pickers';
+import HeaderTop from '../Header/HeaderTop';
 const Register = () => {
     const {name}=useParams()
     const eventInfo=fakeData.find(event=>event.name===name)
@@ -47,7 +48,11 @@ const Register = () => {
         setSelectedDate(date.toDateString());
     };
     return (
-        <div className="d-flex justify-content-center align-items-center">
+       <div>
+           <div>
+               <HeaderTop></HeaderTop>
+           </div>
+            <div className="d-flex justify-content-center align-items-center">
             <div className="register-area ">
             <form className="ship-form" onSubmit={handleSubmit(onSubmit)}>
       
@@ -88,6 +93,7 @@ const Register = () => {
             </div> 
         </div>
 
+       </div>
     );
 };
 
